@@ -46,7 +46,7 @@ export default function Layout({
           </Link>
         </div>
       </div>
-      <main className="flex w-full flex-col items-center justify-center py-32">
+      <main className="flex w-full flex-col items-center justify-center py-16">
         {children}
       </main>
     </>
