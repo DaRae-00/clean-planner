@@ -1,10 +1,18 @@
-
 <h1 align="center">
   Clean Planner
 </h1>
 
+### Version
 
-### install & start 
+```bash
+
+  node : 18.13.0
+  yarn : 1.22.19
+
+```
+
+### Install & Start
+
 ```bash
 
   yarn install
@@ -21,7 +29,6 @@
 - `capitalize` – Capitalize the first letter of a string
 - `truncate` – Truncate a string to a specified length
 - [`use-debounce`](https://www.npmjs.com/package/use-debounce) – Debounce a function call / state update
-
 
 ## Author
 
