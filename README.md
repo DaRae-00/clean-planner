@@ -4,6 +4,14 @@
 </h1>
 
 
+### install & start 
+```bash
+
+  yarn install
+  yarn dev
+
+```
+
 ### Hooks and Utilities
 
 - `useIntersectionObserver` –  React hook to observe when an element enters or leaves the viewport
