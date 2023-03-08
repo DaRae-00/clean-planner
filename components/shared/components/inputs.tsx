@@ -1,3 +1,5 @@
+import { BsCheckLg } from "react-icons/bs";
+
 export function Switch() {
   return (
     <div className="switch">
@@ -20,13 +22,17 @@ export function Checkbox() {
       <div className="checkbox__1">
         <input id="checkbox-1" type="checkbox" />
         <label>
-          <i className="material-icons">done</i>
+          <i>
+            <BsCheckLg />
+          </i>
         </label>
       </div>
       <div className="checkbox__2">
         <input id="checkbox-2" type="checkbox" checked />
         <label>
-          <i className="material-icons">done</i>
+          <i>
+            <BsCheckLg />
+          </i>
         </label>
       </div>
     </div>
@@ -63,24 +69,38 @@ export function Chip() {
   );
 }
 
-export function Input() {
+export function Input({
+  width,
+  placeholder,
+  icon,
+  ...rest
+}: {
+  width?: string;
+  placeholder?: string;
+  icon?: React.ReactNode;
+}) {
   return (
     <>
-      <div className="text-input">
-        <input
-          type="text"
-          className="text-input__input"
-          placeholder="Type anything..."
-        />
-      </div>
-
-      {/* // todo : icon text input   */}
-      {/* <div className="search">
-        <input type="text" className="search__input" placeholder="Search..." />
-        <div className="search__icon">
-          <ion-icon name="search"></ion-icon>
+      {!icon ? (
+        <div className="text-input">
+          <input
+            type="text"
+            className="text-input__input w-full"
+            placeholder={placeholder}
+            {...rest}
+          />
         </div>
-      </div> */}
+      ) : (
+        <div className="search">
+          <input
+            type="text"
+            className="search__input w-full"
+            placeholder={placeholder}
+            {...rest}
+          />
+          <div className="search__icon">{icon}</div>
+        </div>
+      )}
     </>
   );
 }

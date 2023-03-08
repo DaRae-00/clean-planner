@@ -5,6 +5,7 @@ export function Button({
 }: {
   label: string;
   color: "primary" | "secondary";
+  [x: string]: any;
 }) {
   let classNm = "btn btn__primary";
 
